@@ -10,6 +10,10 @@ for(i = 0; i < listItems.length; i++) {
 
 function activateItem() {
     headline.innerHTML = this.innerHTML;
+    for(i = 0; i < listItems.length; i++) {
+        listItems[i].classList.remove("active")
+    }
+    this.classList.add("active");
 }
 
 addButton.addEventListener("click", createNewItem);
